@@ -1,0 +1,22 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    
+    <package name="default" extends="struts-default">
+        <result-types>
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" default="false" /> 
+        </result-types>
+
+        <action name="login" class="com.loginAction">
+            <result name="success" type="tiles">/admin</result> 
+            <result name="fail">/index.jsp</result> 
+        </action>
+         <action name="Register" class="com.RegisterAction">
+            <result name="success">/Login.jsp</result> 
+            <result name="fail">/Register.jsp</result> 
+        </action>
+    </package>
+</struts>
