@@ -82,17 +82,14 @@ public class RegisterAction extends ActionSupport {
 
     @Override
     public void validate() {
+
         String query = "select email from user where username='" + username + "'";
         Statement st;
         try {
             st = con.createStatement();
             ResultSet rs = st.executeQuery(query);
             if (rs.next()) {
-                if (!rs.getString(1).equals(email)) {
-                    addFieldError("email", "Email already exists!");
-                } else {
-                    addFieldError("username", "Username already exists!");
-                }
+                addActionMessage("User Name not avaible...!!!");
             }
         } catch (SQLException ex) {
             System.out.println(ex.toString());
@@ -102,15 +99,31 @@ public class RegisterAction extends ActionSupport {
 
     @Override
     public String execute() throws Exception {
-        String query = "insert into user(Name, Password, Email, Username, Gender) values('" + fname + " " + lname + "', '" + password + "', '" + email + "', '" + username + "', '" + gender + "')";
+        String query = "select email from user where username='" + username + "'";
         Statement st;
         try {
             st = con.createStatement();
-            st.executeUpdate(query);
+            ResultSet rs = st.executeQuery(query);
+            if (rs.next()) {
+                 return "fail";
+                
+            } else {
+
+                query = "insert into user(Name, Password, Email, Username, Gender) values('" + fname + " " + lname + "', '" + password + "', '" + email + "', '" + username + "', '" + gender + "')";
+
+                try {
+                    st = con.createStatement();
+                    st.executeUpdate(query);
+                } catch (SQLException ex) {
+                    Logger.getLogger(RegisterAction.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                return "success";
+
+            }
         } catch (SQLException ex) {
-            Logger.getLogger(RegisterAction.class.getName()).log(Level.SEVERE, null, ex);
-        }       
-        return "success";
+            System.out.println(ex.toString());
+        }
+        return "fail";
     }
 
 }

@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -43,9 +44,14 @@
                 </nav>
 
             </div>
+            <s:if test="hasActionMessages()">
+                <div class="alert alert-danger" role="alert" style="width:32%; margin-left: 34% ;margin-top: 1%; " >
+                    <s:actionmessage/>
+                </div>
+            </s:if>
             <!--END TOPBAR-->
             <div id="wrapper">
-                <div class="col-lg-4" style="margin-left: 33%; margin-top: 3%;">
+                <div class="col-lg-4" style="margin-left: 33%; margin-top: 2%;">
                     <div class="panel panel-orange">
                         <div class="panel-heading">
                             Registration </div>
@@ -67,11 +73,7 @@
                                             <i class="fa fa-lock"></i>
                                             <input id="inputPassword" type="password" placeholder="Password" class="form-control" name="password"></div>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="input-icon right">
-                                            <i class="fa fa-lock"></i>
-                                            <input id="inputConfirmPassword" type="password" placeholder="Confirm Password" class="form-control" name="cpassword"></div>
-                                    </div>
+
                                     <hr>
                                     <div class="row">
                                         <div class="col-md-6">

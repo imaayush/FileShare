@@ -42,9 +42,10 @@
                             <div class="input-icon right text-white"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Search here..." class="form-control text-white"/></div>
                         </form>
                         <div style="float:right; margin-top:0.7%; margin-right: 3%">
-                            <button onclick="window.location.href='Login.jsp'" class="btn btn-white">Upload</button>
+                            <button onclick="window.location.href='LoginFrom'" class="btn btn-white">Upload</button>
+                            
                             &nbsp;&nbsp;
-                            <button onclick="window.location.href='Login.jsp'" class="btn btn-blue">Sign in</button>
+                            <button onclick="window.location.href='LoginFrom'" class="btn btn-blue">Sign in</button>
                         </div>
                     </div>
                 </nav>

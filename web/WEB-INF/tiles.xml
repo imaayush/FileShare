@@ -10,5 +10,6 @@
         <put-attribute name="menu" value="/menu.jsp" />
         <put-attribute name="chat" value="/chat.jsp" />
         <put-attribute name="SearchResult" value="/SearchResult.jsp" />
-    </definition>    
+    </definition> 
+     
 </tiles-definitions>
