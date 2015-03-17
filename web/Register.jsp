@@ -88,9 +88,9 @@
                                     <div class="form-group">
                                         <select class="form-control" name="gender">
                                             <option>Gender</option>
-                                            <option value="0">Male</option>
-                                            <option value="1">Female</option>
-                                            <option value="2">Other</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>Other</option>
                                         </select></div>
                                     <div class="form-group">
                                         <div class="checkbox">

@@ -79,14 +79,10 @@ public class loginAction extends ActionSupport implements SessionAware {
             ResultSet rs = st.executeQuery(query);
             if (rs.next()) {
                 if (!rs.getString(1).equals(password)) {
-
                     return "fail";
-
                 } else {
-
                     sessionMap.put("username", username);
                     return "success";
-
                 }
             }
 

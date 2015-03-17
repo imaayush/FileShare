@@ -23,6 +23,7 @@
     <link type="text/css" rel="stylesheet" href="styles/style-responsive.css">
     <link type="text/css" rel="stylesheet" href="styles/zabuto_calendar.min.css">
     <link type="text/css" rel="stylesheet" href="styles/pace.css">
+    <link href="styles/newcss.css" rel="stylesheet" type="text/css"/>
     <link type="text/css" rel="stylesheet" href="styles/jquery.news-ticker.css">
 </head>
 <body>
@@ -44,23 +45,15 @@
                 <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs" style="width:45%">
                     <div class="input-icon right text-white"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Search here..." class="form-control text-white"/></div>
                 </form>
-                
+                <button onclick="window.location.href='UploadFrom'" class="btn btn-white" style="margin-top: 0.7%; margin-left: 1%;">Upload</button>
                 <ul class="nav navbar navbar-top-links navbar-right mbn">
-                    <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-bell fa-fw"></i><span class="badge badge-green">3</span></a>
-                        
-                    </li>
-                    <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-envelope fa-fw"></i><span class="badge badge-orange">7</span></a>
-                        
-                    </li>
-                    <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-tasks fa-fw"></i><span class="badge badge-yellow">8</span></a>
-                        
-                    </li>
+                   
                     <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle"><img src="images/avatar/48.jpg" alt="" class="img-responsive img-circle"/>&nbsp;<span class="hidden-xs"></span>&nbsp;<s:property value="#session.username"/><span class="caret"></span></a>
                         <ul class="dropdown-menu dropdown-user pull-right">
-                            <li><a href="#"><i class="fa fa-user"></i>My Profile</a></li>
+                            <li><a href="Myprofile"><i class="fa fa-user"></i>My Profile</a></li>
                             <li><a href="#"><i class="fa fa-calendar"></i>My Calendar</a></li>
                             <li><a href="#"><i class="fa fa-envelope"></i>My Inbox<span class="badge badge-danger">3</span></a></li>
-                            <li><a href="#"><i class="fa fa-tasks"></i>My Tasks<span class="badge badge-success">7</span></a></li>
+                            <li><a href=""><i class="fa fa-tasks"></i>My Tasks<span class="badge badge-success">7</span></a></li>
                             <li class="divider"></li>
                             <li><a href="#"><i class="fa fa-lock"></i>Lock Screen</a></li>
                             <li><a href="Logout"><i class="fa fa-key"></i>Log Out</a></li>

@@ -8,7 +8,7 @@
     </div>
 </s:if>
 <div id="wrapper">
-    <div class="col-lg-4" style="margin-left: 33%; margin-top: 8%;">
+    <div class="col-lg-4" style="margin-left: 32%; margin-top: 8%;">
         <div class="panel panel-orange">
             <div class="panel-heading">
                 Login </div>

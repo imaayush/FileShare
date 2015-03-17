@@ -11,5 +11,16 @@
         <put-attribute name="chat" value="/chat.jsp" />
         <put-attribute name="SearchResult" value="/SearchResult.jsp" />
     </definition> 
-     
+     <definition name="/upload" template="/layout.jsp">
+        <put-attribute name="header" value="/temp_header.jsp" />
+        <put-attribute name="menu" value="/menu.jsp" />
+        <put-attribute name="chat" value="/chat.jsp" />
+        <put-attribute name="SearchResult" value="/uploadfrom.jsp" />
+    </definition> 
+     <definition name="/myprofile" template="/layout.jsp">
+        <put-attribute name="header" value="/temp_header.jsp" />
+        <put-attribute name="menu" value="/menu.jsp" />
+        <put-attribute name="chat" value="/chat.jsp" />
+        <put-attribute name="SearchResult" value="/Myprofile.jsp" />
+    </definition> 
 </tiles-definitions>

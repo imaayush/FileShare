@@ -21,8 +21,19 @@
         <action name="LoginFrom">
             <result >Login.jsp</result> 
         </action>
+        <action name="UploadFrom" >
+            <result name="success" type="tiles">/upload</result> 
+        </action>
+         <action name="Myprofile" class="com.viewAction" method="execute">
+            <result name="success" type="tiles">/myprofile</result> 
+             <result name="fail" type="tiles">/Login.jsp</result> 
+        </action>
         <action name="Logout" class="com.loginAction" method="logout">  
             <result name="success">/Login.jsp</result>  
         </action>  
+        <action name="Uploadphoto" class="com.UploadAction" >  
+            <result name="success" type="tiles">/myprofile</result>  
+            <result name="fail">/admin.jsp</result>  
+        </action> 
     </package>
 </struts>
